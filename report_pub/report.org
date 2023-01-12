@@ -1,0 +1,13 @@
+#+title: Relatório PUB
+#+options: num:3 
+* Resumo
+* Introdução e Justificativa
+* Objetivo
+* Metodologia
+** Parte 1: Instalação dos pacotes e ambientes virtuais
+** Parte 2: Aprendizado e uso dos pacotes
+** Parte 3: Catalogação de funcionalidade dos pacotes
+** Parte 4: Analise comparativa de desempenho dos pacotes
+** Parte 5: Simulações de resultados de redes complexas
+* Ánalise dos resultados
+* Referências
