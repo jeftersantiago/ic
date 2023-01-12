@@ -1,0 +1,65 @@
+#+title: Projeto PUB
+#+setupfile: ~/Dropbox/Templates/physics.org
+* DONE Parte 1: Instalação de pacotes e ambientes virtuais 
+*** Máquina virtual
+   - Distribuição: =Ubuntu=
+*** pip
+   Aqui está o [[https://docs.python.org/3/library/venv.html][link]] para a documentação utilizada como referência na criação dos ambientes virtuais
+   com =venv= .
+   Para olhar a quantidade de disco utilizado:
+   Os pacotes instalados ficam localizados no diretório
+   =env_name/lib/python3.10/site-packages/= - onde =env_name= é o nome do ambiente virtual -
+   para saber a quantidade de disco utilizado usamos o comando abaixo:
+   #+begin_src shell
+     du env_name/lib/python3.10/site-packages
+   #+end_src
+**** Networkx 
+    - Sem dificuldades na instalação.
+    - Quantidade de disco utilizado: *32M*
+**** igraph
+   - Sem dificuldades na instalação.
+   - Quantidade de disco utilizado: *29M*
+**** graph-tools
+   - Sem dificuldades na instalação.
+   - Quantidade de disco utilizado: *87M*
+*** conda
+   Este é o [[https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands][link]] da documentação do =conda= utilizada nessa etapa.
+   Para verificar a quantidade de disco utilizando =conda= foi usado o seguinte
+   comando
+   #+begin_src shell
+     du -sh $(conda info --b)"/envs/$conda_env"
+   #+end_src
+   onde =$conda_env= é o nome do ambiente =conda= criado. 
+**** Networkx
+   - Sem dificuldades na instalação.
+   - Quantidade de disco utilizada: *208M*
+**** igraph
+   - Para realizar a instalação desse pacote no =conda= foi necessário
+     olhar a [[https://anaconda.org/conda-forge/python-igraph][documentação]], pois não se instala com simplesmente o comando
+     =conda install pacote=.
+   - Quantidade de disco utilizada: *279M*
+**** graph-tools
+   - A instalação do =graph-tools= apresentou as mesmas dificuldades da do =igraph=.
+   - Quantidade de disco utilizada: *1.4GB*
+* TODO Parte 2: Aprendizado e uso dos pacotes
+   - [X]  NetworkX
+   - [ ]  igraph
+   - [ ]  graph-tools
+* TODO Parte 3: Catalogação de funcionalidade dos pacotes
+  *Comparar abrangência de funcionalidades.*
+  *Notar possíveis limitações dos pacotes em questão.*
+   - [ ] NetworkX
+   - [ ] igraph
+   - [ ] graph-tools    
+* TODO Parte 4: Analise comparativa de desempenho dos pacotes
+* TODO Parte 5: Simulações de resultados de redes complexas
+
+
+* Referencias
+** Papers 
+*** Readed
+  - [[~/Papers/Strogatz2001.pdf]]
+*** Reading 
+  - [[~/Papers/Newman2003.pdf]]
+
+
