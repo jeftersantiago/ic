@@ -53,8 +53,6 @@
    - [ ] graph-tools    
 * TODO Parte 4: Analise comparativa de desempenho dos pacotes
 * TODO Parte 5: Simulações de resultados de redes complexas
-
-
 * Referencias
 ** Papers 
 *** Readed

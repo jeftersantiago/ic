@@ -1,0 +1,22 @@
+#+title: Anotações sobre a biblitoeca igraph-python
+
+* Visualização de grafos
+  
+  A documentação é massante, principalmente em relação à NetworkX, os textos costumam ser longos
+  e com poucos exemplos visuais com plots de grafos. Esse problema ocorre inclusive em alguns dos
+  tutoriais sobre visualização de grafos usando igraph .i.e. https://igraph.org/python/tutorial/0.9.6/visualisation.html. 
+
+  Isso pode tornar consultas à documentação mais cansativa e longa do que deveria, sobretudo quando
+  se está aprendendo a usar a biblioteca.
+
+* Seleção de exemplos
+  A biblioteca é menos abrangente que a NetworkX em seus exemplos, porém, os exemplos
+  são apresentados de forma mais clara. As páginas de exemplo da igraph em geral contém
+  explicações sobre o exemplo em questão, além de opções de download em formato notebook ou python. 
+* Busca por exemplos e documentação online
+  A =igraph= não é especifíca do Python, esse é só um dos módulos da biblioteca, e aparentemente ela
+  é mais utilizada por usuários da linguagem `R`. Consequentemente as buscas feitas por códigos de
+  exemplo  ou tutoriais do pacote são em  outras linguagens.
+  Isso pode atrasar um pouco quem está aprendendo.
+
+  
