@@ -8,8 +8,8 @@
    - [X] Grafos dirigidos.
    - [X] Grafos ponderados.
    - [X] Criação de grafos a partir de matriz de adjacências.
- - [ ] Operações envolvendo grafos 
-   - [ ] Acesso à vertices e arestas.
+ - [-] Operações envolvendo grafos 
+   - [X] Acesso à vertices e arestas.
    - [ ] União e composição de grafos.
    - [ ] Conversão de grafos 
      - [ ] Grafos dirigidos em não dirigidos.
