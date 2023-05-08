@@ -1,0 +1,56 @@
+#+title: Anotações sobre a biblitoeca igraph-python
+#+startup: latexpreview
+
+* TODO [1/4]
+ - [X] Criação e manipulação de grafos 
+   - [X] Criação de grafos: como criar grafos a partir de listas de arestas ou vertices. 
+   - [X] Manipulação de grafos: adição e remoção de vertices e arestas.
+   - [X] Visualização de grafos: como desenhar grafos.
+   - [X] Grafos dirigidos.
+   - [X] Grafos ponderados.
+   - [X] Criação de grafos a partir de matriz de adjacências.
+ - [-] Operações envolvendo grafos 
+   - [X] Acesso à vertices e arestas.
+   - [X] União e composição de grafos.
+   - [-] Conversão de grafos 
+     - [X] Grafos dirigidos em não dirigidos.
+     - [X] Grafos nao dirigidos em dirigidos.
+     - [ ] Grafos ponderados em nao ponderados.
+ - [ ] Propriedades estruturais de grafos (ou resultados em redes complexas)
+   - [ ] Detectar componentes de uma rede
+   - [ ] Acesso a vizinhos em uma rede
+   - [ ] Medidas de conectividade.
+   - [ ] Medidas de centralidade.
+   - [ ] Medidas de transitividade.
+ - [ ] Modelos de grafos 
+   - [ ] Grafos aleatórios
+   - [ ] Grafo de Erdos-Renyi (Modelo $G_{np}$)
+   - [ ] Modelo de Barabási-Albert
+* Visualização de grafos
+  
+  A documentação é massante, principalmente em relação à NetworkX, os textos costumam ser longos
+  e com poucos exemplos visuais com plots de grafos. Esse problema ocorre inclusive em alguns dos
+  tutoriais sobre visualização de grafos usando igraph .i.e. https://igraph.org/python/tutorial/0.9.6/visualisation.html. 
+
+  Isso pode tornar consultas à documentação mais cansativa e longa do que deveria, sobretudo quando
+  se está aprendendo a usar a biblioteca.
+
+** Pontos em que tive problemas com a visualização
+   - Criação de grafos a partir de lista de adjacências.
+     No site da documentação tem um exemplo de uso, mas sem imagem tive problemas
+     para replicar o uso.
+
+** Layouts
+   - Não possui o layout spring.
+* Seleção de exemplos
+  A biblioteca é menos abrangente que a NetworkX em seus exemplos, porém, os exemplos
+  são apresentados de forma mais clara. As páginas de exemplo da igraph em geral contém
+  explicações sobre o exemplo em questão, além de opções de download em formato notebook ou python. 
+* Busca por exemplos e documentação online
+  A =igraph= não é especifíca do Python, esse é só um dos módulos da biblioteca, e aparentemente ela
+  é mais utilizada por usuários da linguagem `R`. Consequentemente as buscas feitas por códigos de
+  exemplo  ou tutoriais do pacote são em  outras linguagens.
+  Isso pode atrasar um pouco quem está aprendendo.
+* Conclusões gerais
+ - Biblioteca tem poucos exemplos
+ - Falta de imagens e/ou exemplos com visualização
