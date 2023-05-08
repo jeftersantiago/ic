@@ -1,0 +1,177 @@
+#+title: Catalogação de funcionalidades
+#+setupfile: ~/Dropbox/Templates/physics.org
+
+ Quando me referir a grafos estou falando sobre o modelo matemático e com redes quero
+ me refiro ao modelo aplicado a algum dado. Quando me cito *funcionalidades* de
+ algum pacote me refiro a algoritmos de grafos.
+ 
+ Nessa etapa do projeto foram analisadas as funcionalidades dos pacotes e suas respectivas
+ abrangências. Estas são relacionadas a =geração= de grafos,
+ medidas de =transitividade, centralidade, conectividade= etc. 
+
+ As bibliotecas possuem algoritmos mais básicos de grafos como os de busca e para percorrer grafos,
+ mas nessa catalogação só listei os que considero importantes para trabalhar com redes
+ complexas. Como os algoritmos de medidas de centralidade, conectividade etc.
+ 
+ Alguns algoritmos podem ter ficado de fora desse catalogo, isso decorre do motivo citado antes.
+ Nem todos algoritmos presentes nos pacotes são relevantes para o uso mais básico deles.
+ Essa lista é pensada para pessoas iniciantes no estudo de redes complexas e que portanto devem
+ utilizar essas ferramentas mais "relevantes" no inicio da jornada. A partir dessas funcionalidades
+ é possível aprender a utilizar as muitas outras presentes em cada um dos pacotes de acordo com a
+ necessidade do que está tentando fazer. Porém, com base na minha experiência acredito que essa
+ lista contém mais que o necessário para usuários iniciantes.
+
+ Além disso, bastante das funcionalidades escolhidas estão em acordo com o que é discutido [[~/Papers/Travieso2011.pdf][nesse]]
+ artigo. Busquei fazer testes que envolam resultados citados nele.
+
+* NetworkX
+** Texto inicial sobre as funcionalidades
+  Esse pacote me parece ser o mais didático, sobretudo para pessoas que estão iniciando seus
+  estudos em grafos ou redes complexas. Ser escrito em Python contribui para a maior facilidade
+  de se aprender a utiliza-lo. A documentação é no geral mais do que suficiente para se aprender,
+  é bem divida e fácil de encontrar as informações. Além disso o projeto do NetworkX de incentivar
+  contribuidores a escrever =notebooks= com explicações de algoritmos parece ser uma ideia
+  interessante, ainda que, no momento, possuam poucos notebooks com explicações.
+
+  Para tarefas mais "avançadas" o pacote pode não apresentar eficiência tão boa quanto os outros, e
+  isso talvez se deve ao fato de ser escrito puramente em Python - isso o deixa mais leve (ocupação
+  do disco), praticidade e simplicidade da linguagem - o faz ter
+  alguns problemas que a própria linguagem tem. Em relação aos outros pacotes (escritos em C ou C++)
+  o NetworkX apresenta a menor eficiência na execução de algoritmos.
+  *Isso foi constatado quando fiz os testes com algumas funcionalidades do catalógo.
+  E note que elas foram testadas para todo  tipo e tamanho de rede e várias vezes.*
+
+  Com isso, entendo que o pacote pode não ser o melhor para trabalhos que envolvam redes muito
+  grandes (com muitos vertices e arestas) pois na execução de alguns algoritmos em redes dessa
+  proporção o NetworkX pode exigir muito uso de memória e/ou espaço, *como é o caso do algoritmo de
+  Dijkstra testado para várias redes de vários tamanhos*.
+
+  Pode ser um bom pacote para se ter um primeiro contato no estudo de redes complexas, já que é mais
+  leve, de simples instalação e simples de usar - principalmente para pessoas já experientes com
+  Python. Porém, para trabalhos de cunho mais aprofundado deixa a desejar.
+
+** Notas adicionais
+  - Falar sobre a visualização dos grafos usando esse pacote depender do matplotlib, se é bom ou
+    ruim e quais são as limitações do matplotlib e como isso impacta o NetworkX.
+** Catalogo
+*** Criação de grafos
+    =fazer tabela=
+    dirigidos e não dirigidos, ponderados e não ponderados, além de grafos bipartidos.
+
+    Os grafos podem ser criados também a partir de matrizes de adjacências ou listas de adjacências
+    e arquivos =gml=.
+*** Algoritmos de caminho mínimo
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.dijkstra_path.html][=dijkstra_path()=]]        
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.astar.astar_path.html][=astar_path()=]]            
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.bellman_ford_path.html][=bellman_ford_path()=]]      
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.johnson.html][=johnson()=]]                
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.all_pairs_dijkstra_path.html#networkx.algorithms.shortest_paths.weighted.all_pairs_dijkstra_path][=all_pairs_dijkstra_path()=]] 
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.dense.floyd_warshall.html][=floyd_warshall()=]]          
+     - [[https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.bidirectional_dijkstra.html][=bidirectional_dijkstra()=]]  
+*** Algoritmos de busca de caminhos
+    - all_simple_paths()
+    - all_shortest_paths()
+    - shortest_simple_paths()
+    - single_source_shortest_path()
+*** Algoritmos de conectividade
+    - connected_components()
+    - node_connected_components()
+    - strongly_connected_components()
+    - weakly_connected_components()
+*** Algoritmos de árvore geradora
+    - minimum_spanning_tree()
+    - maximum_spanning_tree()
+    - all_spanning_trees()
+*** Medidas de centralidade
+    - Degree centrality
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#degree
+    - Eigenvector centrality
+     https://networkx.org/documentation/latest/reference/algorithms/centrality.html#eigenvector
+    - Closeness centrality
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#closeness
+    - Current Flow Closeness
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#current-flow-closeness
+    - Betweenness centrality
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#shortest-path-betweenness
+    - Current Flow Betweenness
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#current-flow-betweenness
+    - Communicability Betweenness
+      https://networkx.org/documentation/latest/reference/algorithms/centrality.html#communicability-betweenness
+    - Group Centrality
+    - Load
+    - Subgraph
+    - Dispersion
+    - Reaching
+    - Percolation
+    - Second Order Centrality
+    - Trophic
+    - VoteRank
+    - Laplacian
+    - Harmonic Centrality
+*** Algoritmos de detecção de comunidades
+    - girvan_newman()
+    - louvain_communities()
+    - label_propagation_communities()
+    - asyn_fluidc()
+*** Geradores de grafos
+    * Grafos padrão
+      - complete_graph()           
+      - complete_bipartite_graph()
+      - cycle_graph()             
+      - path_graph()               
+      - star_graph()               
+      - wheel_graph()              
+    * Grafos aleatórios
+      - erdos_renyi_graph()
+      - gnm_random_graph()
+      - dense_gnm_random_graph()
+      - barabasi_albert_graph()
+      - watts_strogatz_graph()
+      - connected_watts_strogatz_graph()
+      - random_regular_graph()
+      - random_lobster()                
+      - powerlaw_cluster_graph()     
+    * Grafos de árvores
+      - random_tree()          
+      - uniform_random_tree()
+      - mst_random_tree()
+      - minimum_spanning_tree()
+    * Grafos de treliças
+      - grid_graph()
+      - hypercube_graph()
+      - torus_graph()
+    * Redes sociais
+      - karate_club_graph()
+      - florentine_families_graph()
+      - davis_southern_women_graph()
+* igraph
+** Catalogo
+*** Criação de grafos
+   Graph: Criação de grafos direcionados e não-direcionados.
+*** Algoritmos de caminhos mínimos
+   Dijkstra's algorithm
+   Bellman-Ford algorithm
+   A* algorithm
+   Shortest Path Faster Algorithm (SPFA)
+   Bidirectional Dijkstra's algorithm
+   Johnson's algorithm
+*** Algoritmos de busca de caminhos
+   shortest_paths: Cálculo de caminhos mínimos em um grafo. Floyd-Warshall.
+   all_shortest_paths: Cálculo de todos os caminhos mínimos em um grafo. Dijsktra.
+*** Algoritmos de conectividade   
+*** Medidas de de centralidade
+   - degree: Cálculo de grau de centralidade de vértices em um grafo. =igraph.degree()=
+   - betweenness: Cálculo de betweenness centrality de vértices em um grafo. =igraph.betweenness()=
+   - closeness: Cálculo de closeness centrality de vértices em um grafo. =igraph.closeness()=
+   - eigenvector: Cálculo de eigenvector centrality de vértices em um grafo. =igraph.eigenvector_centrality()=
+   - pagerank: Cálculo do PageRank em um grafo. =igraph.pagerank()=
+   - load centrality: =igraph.load_centrality()=
+*** Algoritmos de detecção de comunidades
+   - communities: Detecção de comunidades em grafos.
+   - modularity: Otimização de modularidade em grafos.
+   - label_propagation: Propagação de rótulos em comunidades de grafos.
+*** Geradores de grafos
+    * Grafos aleatórios
+    Erdos_Renyi: Geração de grafos aleatórios com modelo de Erdos-Renyi.
+    Barabasi_Albert: Geração de grafos aleatórios com modelo de Barabasi-Albert.
+* graph-tools

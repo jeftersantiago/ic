@@ -1,0 +1,54 @@
+#+title: \Huge{Itens 1 a 4}
+#+NAME: Jefter Santiago
+#+EMAIL: jefter@usp.br
+#+options:
+#+setupfile: ~/Dropbox/Templates/computing.org
+* TODO Refazer parte do graph-tool. Foi usada a biblioteca errada.
+* Descrição das tarefas desenvolvidas
+** Máquina virtual e instalação dos pacotes
+ - Foi criado uma máquina virtual =Linux= com distribuição =Ubuntu= e instalado
+   a versão mais recente do Python.
+ - Instalei os softwares =pip= e =minconda=.
+** Instalação dos pacotes =Networkx=, =igraph= e =graph-tools= usando =pip= e =minconda=
+ - Foram criados 3 ambientes virtuais utilizando =python env= e 3 utilizando
+   =conda=, um para cada um dos pacotes separadamente.
+*** Instalação usando =pip=
+  Nesse [[https://docs.python.org/3/library/venv.html][link]] está a documentação utilizada no processo de criação dos ambientes
+  virutais com o =venv=. Para saber a quantidade de disco utilizado após
+  instalação dos pacotes (com suas dependências) foi verificado o tamanho
+  do diretório ~env_name/lib/python3.10/site-packages/~ - onde ~env_name~ é o nome
+  do ambiente virtual criado. Também usando o comando abaixo:
+  #+begin_src shell
+    du $(pip show $package | grep Location | awk '{print $2}')"/$package"
+  #+end_src
+**** Pacote =Networkx=
+   - Não apresentou dificuldades na instalação.
+   - Quantidade de disco utilizado: 32 MB
+**** Pacote =igraph=
+   - Não apresentou dificuldades na instalação.
+   - Quantidade de disco utilizado: 29 MB
+**** Pacote =graph-tools=
+   - Não apresentou dificuldades na instalação.
+   - Quantidade de disco utilizado: 87 MB
+*** Instalação usando =conda=
+  A documentação usada como referência nessa etapa pode ser
+  encontrada nesse [[https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands][link]]. E para verificar a quantidade de disco
+  utilizado pelo pacote a partir do =conda= foi usado o comando:
+  #+begin_src shell
+    du -sh $(conda info --b)"/envs/$conda_env"
+  #+end_src
+   onde =conda_env= é o nome do ambiente =conda= criado.
+**** Pacote =Networkx=
+   - Não apresentou dificuldades na instalação.
+   - Quantidade de disco utilizada: 208M
+**** Pacote =igraph=
+   - Para realizar a instalação desse pacote no =conda= foi necessário
+     olhar a [[https://anaconda.org/conda-forge/python-igraph][documentação]], pois não se instala com simplesmente o comando
+     =conda install pacote=.
+   - Quantidade de disco utilizada: 279M
+**** Pacote =graph-tools=
+   - A instalação do =graph-tools= apresentou as mesmas dificuldades da do =igraph=.
+   - Quantidade de disco utilizada: 1.4GB
+
+
+
