@@ -1,7 +1,6 @@
 #+title: Avaliação comparativa de três pacotes Python para redes complexas
 
 * Metodologia
-
 ** [X] Criação do ambiente virtual e instalação dos pacotes
     Essa seção compreende os itens 1 ao 4 do projeto.
 ** [X] Aprendizado do uso dos pacotes
@@ -15,9 +14,7 @@
     - [X] Percolação em grafos aleatórios no modelo de Erdos-Renyi.
     - [X] Efeito de mundo pequeno nos grafos de Watts-Strogatz.
     - [ ] Resiliência a ataques aleatórios e direcionados em redes sem escala no modelo Albert-Barabasi.
-
 * Analise de resultados      
-
   Itens retirados do projeto:
   - [ ] Parte 1 à 4: Comparação da dificuldade de instalação dos pacotes.
   - [ ] Parte 5: Comparação da dificuldade de aprendizado de uso dos pacotes, tanto em termos da disponibilidade de

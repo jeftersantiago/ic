@@ -27,7 +27,7 @@
 **** Pacote =igraph=
    - Não apresentou dificuldades na instalação.
    - Quantidade de disco utilizado: 29 MB
-**** Pacote =graph-tools=
+**** Pacote =graph-tool=
    - Não apresentou dificuldades na instalação.
    - Quantidade de disco utilizado: 87 MB
 *** Instalação usando =conda=
@@ -46,9 +46,13 @@
      olhar a [[https://anaconda.org/conda-forge/python-igraph][documentação]], pois não se instala com simplesmente o comando
      =conda install pacote=.
    - Quantidade de disco utilizada: 279M
-**** Pacote =graph-tools=
-   - A instalação do =graph-tools= apresentou as mesmas dificuldades da do =igraph=.
+**** Pacote =graph-tool=
+   - A instalação do =graph-tool= apresentou as mesmas dificuldades da do =igraph=.
    - Quantidade de disco utilizada: 1.4GB
+
+   - Quantidade de disco utilizada realmente: 550 M
+
+     (Citar que o ambiente como um todo é maior o que faz ser bem mais de 550M)
 
 
 
